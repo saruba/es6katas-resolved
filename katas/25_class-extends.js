@@ -24,7 +24,7 @@ describe('Classes can inherit from another using `extends`', () => {
       //   }
       // }
       class NullClass extends Null {}
-      let nullInstance = new Null();
+      let nullInstance = new NullClass();
       assert.equal(nullInstance instanceof Object, false);
     });
   });
