@@ -16,7 +16,6 @@ class ConsumableUsers {
     return void 0;
   }
   get anyLeft() {
-    console.log(this.users)
     return this.users.length > 0;
   }
 }
