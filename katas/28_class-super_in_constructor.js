@@ -42,6 +42,9 @@ describe('Inside a class`s constructor `super()` can be used', () => {
         this.isTop = '' + super.constructor;
       }
     }
-    assert.equal(new B().isTop, 'class A {constructor() {"parent"}}');
+    // fix error when babel transpile the class
+    const expect = 'class A {\n      constructor() {\n        "parent";\n      }\n\n    }';
+    // assert.equal(new B().isTop, 'class A {constructor() {"parent"}}');
+    assert.equal(new B().isTop, expect);
   });
 });

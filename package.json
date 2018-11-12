@@ -3,14 +3,20 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "engines" : { "node" : ">=10.9.0" },
+  "engines": {
+    "node": ">=10.9.0"
+  },
   "scripts": {
-    "test": "mocha katas --require=mocha-require.js"
+    "test": "mocha katas --require @babel/register --require=mocha-require.js "
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/cli": "^7.1.5",
+    "@babel/core": "^7.1.5",
+    "@babel/preset-env": "^7.1.5",
+    "@babel/register": "^7.0.0",
     "mocha": "^5.2.0"
   }
 }
