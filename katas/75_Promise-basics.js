@@ -14,13 +14,12 @@ describe('a Promise represents an operation that hasn`t completed yet, but is ex
     it('instantiating it without params throws', function() {
       const fn = () => { new Promise() }
       assert.throws(fn);
-    });  
+    });
     
     it('expects a function as parameter', function() {
       const param = () => {};
       assert.doesNotThrow(() => { new Promise(param); });
     });  
-    
   });
 
   describe('simplest promises', function() {
